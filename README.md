@@ -1,4 +1,4 @@
-## Copy Cat ESD - KRA
+## Copy Cat ESD - KRA Integration
 
 [ERPNext](https://erpnext.com) Integration to the [Copy Cat Group ESD](https://www.copycatgroup.com/) Gadget for tax reporting.
 
