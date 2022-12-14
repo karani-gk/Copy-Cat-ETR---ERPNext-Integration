@@ -31,8 +31,6 @@ class CopyCatGroupESD:
             
         return self.process_payload(invoice_number, deonItemDetails)
     
-    
-    
     def get_vat_class(self, item_tax_rate):
         if item_tax_rate == 16:
             vatClass = "A"
@@ -44,7 +42,6 @@ class CopyCatGroupESD:
             vatClass = "D"
             
         return vatClass
-    
             
     def process_payload(self, invoice_number, deonItemDetails):
         payload = {
@@ -62,11 +59,6 @@ class CopyCatGroupESD:
             }
         
         return payload
-        
-        
-
-
-
 
 @frappe.whitelist()
 def process_invoice(invoice_number):
@@ -78,9 +70,6 @@ def process_invoice(invoice_number):
     response = requests.post(url, json=payload)
     data = json.loads(response.text)
     
-    print(f"\n\n\n {payload} \n\n\n")
-    print(f"\n\n\n {data} \n\n\n")
-    
     qr_code = frappe.get_doc({
         "doctype":"QR Demo", 
         "title": data['qrCode'],
@@ -90,9 +79,7 @@ def process_invoice(invoice_number):
     qr_code.insert()
     frappe.db.commit()
     
-    
     return data
-
 
 
 def get_qr_code(doc):
