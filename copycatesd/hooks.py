@@ -186,9 +186,18 @@ fixtures = [
 ]
 
 
+
+##### Copy Cat Gropu Integration for ERPNext Versions 12 and 13
 jenv = {
 	"methods": [
 		"get_qr_code:copycatesd.services.rest.get_qr_code"
 	]
 }
 
+
+##### Copy Cat Gropu Integration for ERPNext Version 14
+# jinja = {
+# 	"methods": [
+# 		"copycatesd.services.rest.get_qr_code"
+# 	]
+# }
