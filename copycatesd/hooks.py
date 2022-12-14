@@ -179,3 +179,16 @@ user_data_fields = [
 #	"copycatesd.auth.validate"
 # ]
 
+
+fixtures = [
+    "Client Script",
+    "Custom Field"
+]
+
+
+jenv = {
+	"methods": [
+		"get_qr_code:copycatesd.services.rest.get_qr_code"
+	]
+}
+
